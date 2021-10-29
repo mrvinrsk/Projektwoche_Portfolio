@@ -34,7 +34,7 @@
                 Bei diesem Bild handelt es sich um das Originalbild ohne jegliche Bearbeitung.
                 Dieses Bild lässt sich <a
                     href="https://www.pexels.com/de-de/foto/schone-aussicht-auf-den-moranensee-2662116/">hier</a>
-                finden.
+                finden. Scrolle weiter runter, um einige Filter zu testen.
             </p>
 
             <div style="display: flex; justify-content: center; margin-top: 3rem;">
@@ -50,7 +50,7 @@
                     <h4>Grayscale</h4>
                     <p>
                         Dieser Filter wird genutzt um die Sättigung zu einem bestimmten Prozentsatz aus dem Bild zu
-                        entfernen
+                        entfernen.
                     </p>
 
                     <div class="css">
@@ -70,7 +70,6 @@
                     </p>
 
                     <div class="css">
-                        <h5>CSS</h5>
                         <p style="display: inline;">filter: contrast(</p>
                         <input type="number" value=0 min=0 max=200
                             oninput="changeCSS(this, 'ctr', 'filter', 'contrast('+this.value+'%)');">
@@ -87,8 +86,7 @@
                 <section>
                     <h4>Hue-Rotate</h4>
                     <p>
-                        Dieser Filter wird genutzt um die Sättigung zu einem bestimmten Prozentsatz aus dem Bild zu
-                        entfernen
+                        Mit diesem Filter lassen sich alle Farben auf dem Bild rotieren.
                     </p>
 
                     <div class="css">
@@ -108,7 +106,6 @@
                     </p>
 
                     <div class="css">
-                        <h5>CSS</h5>
                         <p style="display: inline;">filter: invert(</p>
                         <input type="number" value=0 min=0 max=100
                             oninput="changeCSS(this, 'inv', 'filter', 'invert('+this.value+'%)');">
@@ -138,9 +135,41 @@
             </div>
         </article>
 
-        <h3 style="text-align: center; margin-top: 5rem;">Unvollständige Liste. Alle filter Eigenschaften können bei <a href="https://developer.mozilla.org/de/docs/Web/CSS/filter">den MDN Web Docs</a> von moz://a gefunden werden.</h3>
+        <h3 style="text-align: center; margin-top: 5rem;">Unvollständige Liste. Alle filter Eigenschaften können bei <a
+                href="https://developer.mozilla.org/de/docs/Web/CSS/filter">den MDN Web Docs</a> von moz://a gefunden
+            werden.</h3>
     </main>
 
+    <script>
+        let left = true;
+        function update() {
+            document.querySelectorAll('div.abs').forEach(el => {
+                const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+                var _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
+
+                if (window.scrollY >= el.offsetTop - 800 || window.scrollY >= (_docHeight - (vh - 100))) {
+                    if (!el.classList.contains('left') && !el.classList.contains('right')) {
+                        if (left) {
+                            //el.style.animation = "slide_f_left .5s forwards";
+                            el.classList.add('left');
+                        } else {
+                            //el.style.animation = "slide_f_right .5s forwards";
+                            el.classList.add('right');
+                        }
+                        left = !left;
+                    }
+                }else {
+                    el.classList.remove('left', 'right');
+                }
+            });
+        }
+
+        document.addEventListener('scroll', () => {
+            update();
+        });
+
+        update();
+    </script>
 </body>
 
 </html>

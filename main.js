@@ -22,13 +22,13 @@ setInterval(updateGreeting, 250);
 
 
 
-/* Diary */
+/* Diary [TODO: Eintragen] */
 let new_old = true;
 function updateDiary() {
     const diaries = [
         ["27.10.2021", "Südamerika Seite erstellt & gestaltet. Außerdem Portfolio begonnen."],
         ["28.10.2021", "Kleine Behebungen am Portfolio bzgl. der Tooltips; Umbau der Navigation (Aufgaben jetzt auf der Onepage anstatt im Navigator); Schrift- & Bilder-Aufgabe gemacht."],
-        ["29.10.2021", "---"]
+        ["29.10.2021", "Benutzerdefiniertes Kontextmenü; Design Umstrukturierung (andere Font); Navigator Logo hinzugefügt; Portfolio responsive gemacht; Protokoll sortierbar gemacht (Neu » Alt & Alt » Neu)"]
     ];
 
     if (new_old) {
