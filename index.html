@@ -19,16 +19,28 @@
 
 <body>
     <ul class="context" id="global_context">
-        <p style="text-align: center; margin-bottom: .5rem; text-decoration: underline; color: #00ABFF;">Portfolio by Marvin</p>
+        <p style="text-align: center; margin-bottom: .5rem; text-decoration: underline; color: #00ABFF;">Portfolio by
+            Marvin</p>
         <li><a href="http://github.mrvinrsk.de/Projektwoche_Portfolio"><i class="bi bi-github"></i>Auf GitHub
                 anzeigen</a></li>
         <li><a onclick="copyTextToClipboard(window.location); this.parentNode.parentNode.classList.remove('visible');"><i
                     class="bi bi-clipboard"></i>URL kopieren</a></li>
     </ul>
 
+    <ul class="context" id="text_context">
+        <li><a id="copy_text"><i
+                    class="bi bi-clipboard"></i>Markierung kopieren</a></li>
+    </ul>
+
     <ul class="context" id="link_context">
         <li><a href="" id="newtab" target="_blank"><i class="bi bi-file-code"></i>Link in neuem Tab öffnen</a></li>
-        <li><a onclick="copyTextToClipboard(this.parentNode.parentNode.querySelector('#newtab').href); this.parentNode.parentNode.classList.remove('visible');"><i class="bi bi-clipboard"></i>Link kopieren</a></li>
+        <li><a
+                onclick="copyTextToClipboard(this.parentNode.parentNode.querySelector('#newtab').href); this.parentNode.parentNode.classList.remove('visible');"><i
+                    class="bi bi-clipboard"></i>Link kopieren</a></li>
+    </ul>
+
+    <ul class="context" id="image_context">
+        <li><a href="" id="open_img"><i class="bi bi-image"></i>Bild anzeigen</a></li>
     </ul>
 
     <div class="popup_wrapper" id="ga_not_yet">

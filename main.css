@@ -83,6 +83,7 @@ p, span {
 #navigator ul li a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 #navigator ul li:hover {
@@ -219,7 +220,6 @@ a.back {
 .context li {
     border-radius: inherit;
     background-color: inherit;
-    border: 1px solid transparent;
     transition-duration: .125s;
 }
 
@@ -234,14 +234,10 @@ a.back {
 }
 
 .context li:hover {
+    transition-duration: inherit;
     cursor: pointer;
-    /*background-color: #00ABFF;*/
-    border: 1px solid #00ABFF;
-    box-shadow: inset 1px 1px 5px 1px rgba(0, 0, 0, .175);
-}
-
-.context li:hover a {
-    transform: scale(0.95);
+    background-color: #00ABFF;
+    color: #EEE;
 }
 
 .context i {

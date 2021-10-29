@@ -164,7 +164,7 @@ p.diary_text {
         flex-direction: column;
     }
 
-    html #aufgaben_wrapper div {
+    html #aufgaben_wrapper a {
         width: 100%;
     }
 }

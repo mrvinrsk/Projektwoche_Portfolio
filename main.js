@@ -197,7 +197,19 @@ function setContextmenu(el, e, not) {
 /* Global Contextmenu */
 let global_context = document.getElementById('global_context');
 document.body.addEventListener('contextmenu', (e) => {
-    setContextmenu(global_context, e);
+    if (!getSelectedText()) {
+        setContextmenu(global_context, e);
+    } else {
+        setContextmenu(document.getElementById('text_context'), e);
+        document.getElementById('copy_text').dataset.copyText = getSelectedText();
+    }
+});
+
+document.getElementById('copy_text').addEventListener('click', () => {
+    copyTextToClipboard(document.getElementById('copy_text').dataset.copyText);
+    setTimeout(() => {
+        document.getElementById('copy_text').parentNode.parentNode.classList.remove('visible');
+    }, 2);
 });
 
 console.log(vw, vh);
@@ -208,6 +220,15 @@ document.querySelectorAll('a').forEach((a) => {
     a.addEventListener('contextmenu', (e) => {
         setContextmenu(link_context, e, link_context);
         link_context.querySelector('#newtab').href = a.href;
+    });
+});
+
+/* Image Contextmenu */
+let image_context = document.getElementById('image_context');
+document.querySelectorAll('img').forEach((img) => {
+    img.addEventListener('contextmenu', (e) => {
+        setContextmenu(image_context, e, image_context);
+        image_context.querySelector('#open_img').href = img.src;
     });
 });
 
@@ -251,8 +272,19 @@ function copyTextToClipboard(text) {
         return;
     }
     navigator.clipboard.writeText(text).then(function () {
-        console.log('Async: Copying to clipboard was successful!');
+        console.log('Async: Copying to clipboard was successful! (' + text + ')');
     }, function (err) {
         console.error('Async: Could not copy text: ', err);
     });
+}
+
+
+function getSelectedText() {
+    var text = "";
+    if (typeof window.getSelection != "undefined") {
+        text = window.getSelection().toString();
+    } else if (typeof document.selection != "undefined" && document.selection.type == "Text") {
+        text = document.selection.createRange().text;
+    }
+    return text;
 }
