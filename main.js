@@ -31,16 +31,16 @@ function updateDiary() {
         ["29.10.2021", "---"]
     ];
 
-    if(new_old) {
+    if (new_old) {
         diaries.reverse();
     }
 
     const diary = document.getElementById('diary_wrapper');
     const sort_text = document.getElementById('diary_sorting');
 
-    if(new_old) {
+    if (new_old) {
         sort_text.innerHTML = "Neu » Alt";
-    }else {
+    } else {
         sort_text.innerHTML = "Alt » Neu";
     }
 
@@ -104,8 +104,13 @@ function toggleNav() {
     document.querySelector('#navigator_bg').classList.toggle('visible');
 }
 
-['#hamburger', '#navigator_bg'].forEach(id => {
-    document.querySelector(id).addEventListener('click', () => {
+document.querySelector('#navigator_bg').addEventListener('click', () => {
+    toggleNav();
+});
+
+/* Close Navigator on click mobile */
+document.querySelector('#navigator').querySelectorAll('li:not(#logo)').forEach(li => {
+    li.addEventListener('click', () => {
         toggleNav();
     });
 });

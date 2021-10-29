@@ -39,6 +39,8 @@ p, span {
 
 #navigator a {
     color: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 #navigator ul {
@@ -46,6 +48,7 @@ p, span {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
     column-gap: 2rem;
     font-size: 1.175rem;
     text-transform: uppercase;
@@ -53,8 +56,19 @@ p, span {
     transition-duration: inherit;
 }
 
-#navigator.scrolled ul {
-    font-size: .75rem;
+#logo {
+    margin-right: auto;
+    transition-duration: .25;
+}
+
+#logo img {
+    width: 72px;
+    border-radius: 100%;
+    transition-duration: .25s;
+}
+
+#navigator.scrolled #logo img {
+    width: 58px;
 }
 
 #navigator ul li ul {
@@ -87,6 +101,12 @@ p, span {
     font-size: 150%;
 }
 
+@media screen and (min-width: 900.1px) {
+    html #navigator.scrolled ul {
+        font-size: .85rem;
+    }
+}
+
 @media screen and (max-width: 900px) {
     html #navigator {
         padding: 1.425rem 2rem;
@@ -96,6 +116,9 @@ p, span {
     }
     html #navigator ul li:not(#hamburger) {
         display: none;
+    }
+    #logo {
+        display: block !important; /* Bad practise :c */
     }
     #hamburger {
         display: block;
@@ -116,8 +139,8 @@ p, span {
         display: block;
     }
 
-    html #navigator.open #hamburger {
-        display: none;
+    html #navigator.open #hamburger, html #navigator.open #logo {
+        display: none !important;
     }
 
     html #navigator_bg {
