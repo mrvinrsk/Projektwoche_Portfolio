@@ -23,17 +23,34 @@ setInterval(updateGreeting, 250);
 
 
 /* Diary */
-const diaries = [
-    ["29.10.2021", "---"],
-    ["28.10.2021", "Kleine Behebungen am Portfolio bzgl. der Tooltips; Umbau der Navigation (Aufgaben jetzt auf der Onepage anstatt im Navigator); Schrift- & Bilder-Aufgabe gemacht."],
-    ["27.10.2021", "Südamerika Seite erstellt & gestaltet. Außerdem Portfolio begonnen."],
-];
+let new_old = true;
+function updateDiary() {
+    const diaries = [
+        ["27.10.2021", "Südamerika Seite erstellt & gestaltet. Außerdem Portfolio begonnen."],
+        ["28.10.2021", "Kleine Behebungen am Portfolio bzgl. der Tooltips; Umbau der Navigation (Aufgaben jetzt auf der Onepage anstatt im Navigator); Schrift- & Bilder-Aufgabe gemacht."],
+        ["29.10.2021", "---"]
+    ];
 
-const diary = document.getElementById('diary_wrapper');
+    if(new_old) {
+        diaries.reverse();
+    }
 
-diaries.forEach(el => {
-    diary.innerHTML += "<article class='diary_entry'><h3 class='diary_date'>Tätigkeiten am " + el[0] + "</h3><p class='diary_text'>" + el[1] + "</p></article>";
-});
+    const diary = document.getElementById('diary_wrapper');
+    const sort_text = document.getElementById('diary_sorting');
+
+    if(new_old) {
+        sort_text.innerHTML = "Neu » Alt";
+    }else {
+        sort_text.innerHTML = "Alt » Neu";
+    }
+
+    diary.innerHTML = "";
+    diaries.forEach(el => {
+        diary.innerHTML += "<article class='diary_entry'><h3 class='diary_date'>Tätigkeiten am " + el[0] + "</h3><p class='diary_text'>" + el[1] + "</p></article>";
+    });
+}
+
+updateDiary();
 
 
 let delay = 0;
@@ -65,7 +82,7 @@ function hideAllPopups() {
 }
 
 document.querySelectorAll('.popup_wrapper').forEach((el) => {
-    el.addEventListener('click', function() {
+    el.addEventListener('click', function () {
         hideAllPopups();
     });
 });
@@ -74,9 +91,9 @@ document.querySelectorAll('.popup_wrapper').forEach((el) => {
 /* Navigator Scroll */
 document.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
-    if(window.scrollY >= 100) {
+    if (window.scrollY >= 100) {
         nav.classList.add('scrolled');
-    }else {
+    } else {
         nav.classList.remove('scrolled');
     }
 });

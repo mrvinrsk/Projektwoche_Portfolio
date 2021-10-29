@@ -106,6 +106,14 @@
     margin: 0;
 }
 
+#diary_sorting::before {
+    content: 'Sortiert nach: [';
+}
+
+#diary_sorting::after {
+    content: ']';
+}
+
 #diary_wrapper {
     margin-top: .5rem;
     display: flex;
