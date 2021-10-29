@@ -1,0 +1,66 @@
+ul, ol {
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2 {
+    color: #00ABFF;
+}
+
+h1 {
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+table {
+    margin: 1.5rem 0;
+    width: 100%;
+    padding: .5rem;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #d3d3d3;
+}
+
+.img_wrapper {
+    margin: 3rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: underline;
+    color: blue;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+a:visited {
+    color: magenta;
+}
+
+.wichtig {
+    font-weight: bold;
+    color: red;
+}

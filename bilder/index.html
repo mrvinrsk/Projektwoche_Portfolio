@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilder</title>
+
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="main.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        function changeCSS(el, el_id, attribute, value) {
+            value.replace('$value$', el.value);
+
+            console.log(value);
+            $('#' + el_id).css(attribute, value);
+            console.log('y');
+        }
+    </script>
+</head>
+
+<body>
+    <a href="../index.html" class="back">Zurück zur Hauptseite</a>
+
+    <main>
+        <div style="margin-bottom: 3rem;">
+            <h2>Original Bild</h2>
+            <p>
+                Bei diesem Bild handelt es sich um das Originalbild ohne jegliche Bearbeitung.
+                Dieses Bild lässt sich <a
+                    href="https://www.pexels.com/de-de/foto/schone-aussicht-auf-den-moranensee-2662116/">hier</a>
+                finden.
+            </p>
+
+            <div style="display: flex; justify-content: center; margin-top: 3rem;">
+                <img src="img/landschaft1.jpg">
+            </div>
+        </div>
+
+        <article>
+            <div class="abs">
+                <img src="img/landschaft1.jpg" id="gsc" />
+
+                <section>
+                    <h4>Grayscale</h4>
+                    <p>
+                        Dieser Filter wird genutzt um die Sättigung zu einem bestimmten Prozentsatz aus dem Bild zu
+                        entfernen
+                    </p>
+
+                    <div class="css">
+                        <p style="display: inline;">filter: grayscale(</p>
+                        <input type="number" value=0 min=0 max=100
+                            oninput="changeCSS(this, 'gsc', 'filter', 'grayscale('+this.value+'%)');">
+                        <p style="display: inline;">%);</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="abs">
+                <section>
+                    <h4>Contrast</h4>
+                    <p>
+                        Mit diesem Filter wird der Kontrast erhöht oder verringert.
+                    </p>
+
+                    <div class="css">
+                        <h5>CSS</h5>
+                        <p style="display: inline;">filter: contrast(</p>
+                        <input type="number" value=0 min=0 max=200
+                            oninput="changeCSS(this, 'ctr', 'filter', 'contrast('+this.value+'%)');">
+                        <p style="display: inline;">%);</p>
+                    </div>
+                </section>
+
+                <img src="img/landschaft1.jpg" id="ctr" />
+            </div>
+
+            <div class="abs">
+                <img src="img/landschaft1.jpg" id="huer" />
+
+                <section>
+                    <h4>Hue-Rotate</h4>
+                    <p>
+                        Dieser Filter wird genutzt um die Sättigung zu einem bestimmten Prozentsatz aus dem Bild zu
+                        entfernen
+                    </p>
+
+                    <div class="css">
+                        <p style="display: inline;">filter: grayscale(</p>
+                        <input type="number" value=0 min=-360 max=360
+                            oninput="changeCSS(this, 'huer', 'filter', 'hue-rotate('+this.value+'deg)');">
+                        <p style="display: inline;">deg);</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="abs">
+                <section>
+                    <h4>Invert</h4>
+                    <p>
+                        Invertiert die Ursprungsfarben des Bildes.
+                    </p>
+
+                    <div class="css">
+                        <h5>CSS</h5>
+                        <p style="display: inline;">filter: invert(</p>
+                        <input type="number" value=0 min=0 max=100
+                            oninput="changeCSS(this, 'inv', 'filter', 'invert('+this.value+'%)');">
+                        <p style="display: inline;">%);</p>
+                    </div>
+                </section>
+
+                <img src="img/landschaft1.jpg" id="inv" />
+            </div>
+
+            <div class="abs">
+                <img src="img/landschaft1.jpg" id="op" />
+
+                <section>
+                    <h4>Opacity</h4>
+                    <p>
+                        Kontrolliere die Transparenz des Bildes.
+                    </p>
+
+                    <div class="css">
+                        <p style="display: inline;">filter: opacity(</p>
+                        <input type="number" value=0 min=0 max=100
+                            oninput="changeCSS(this, 'op', 'filter', 'opacity('+this.value+'%)');">
+                        <p style="display: inline;">%);</p>
+                    </div>
+                </section>
+            </div>
+        </article>
+
+        <h3 style="text-align: center; margin-top: 5rem;">Unvollständige Liste. Alle filter Eigenschaften können bei <a href="https://developer.mozilla.org/de/docs/Web/CSS/filter">den MDN Web Docs</a> von moz://a gefunden werden.</h3>
+    </main>
+
+</body>
+
+</html>

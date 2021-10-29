@@ -1,0 +1,271 @@
+#title {
+    margin: 2.5rem 0 0;
+    text-align: center;
+}
+
+#greeting {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 50%;
+    margin: .75rem auto 0;
+    padding: 10px 30px;
+    font-size: .825rem;
+    transition-duration: .25s;
+    color: #EEE;
+}
+
+#greeting:hover {
+    transform: scale(1.1);
+    cursor: default;
+}
+
+@media screen and (max-width: 800px) {
+    html #greeting {
+        width: 85%;
+    }
+}
+
+#greeting:after {
+    position: absolute;
+    content: '';
+    width: 75%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    background-color: #00ABFF;
+    border: 1px solid #0066FF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    transform: skewX(-10deg) translate(-50%, -0%);
+}
+
+#start {
+    overflow: visible;
+}
+
+#heading {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 2rem;
+    align-items: center;
+    overflow: visible;
+}
+
+#heading #text {
+    width: 85%;
+}
+
+#pb {
+    width: 175px;
+    height: auto;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 1000px) {
+    html #heading {
+        flex-direction: column-reverse;
+        row-gap: 2rem;
+    }
+
+    html #heading #subtitle {
+        font-size: 1.35rem;
+        text-align: center;
+    }
+
+    html #heading #pb {
+        width: 225px;
+    }
+
+    html #heading #text {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+#nav_info {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#diary {
+    margin-top: 5rem;
+}
+
+#diary_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+#diary_title h2 {
+    margin: 0;
+}
+
+#diary_wrapper {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.diary_entry {
+    background-color: #00ABFF;
+    border-radius: 3px;
+    padding: 1rem;
+    box-shadow: 0 0 7px rgba(0, 0, 0, .075);
+    display: block;
+    cursor: default;
+    user-select: none;
+}
+
+.diary_entry h3, .diary_entry p {
+    margin: 0;
+}
+
+p.diary_text {
+    color: #EEE;
+}
+
+#aufgaben {
+    overflow: visible;
+}
+
+#aufgaben_wrapper {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+    overflow: visible;
+}
+
+@media screen and (max-width: 1150px) {
+    html #aufgaben_wrapper {
+        flex-direction: column;
+    }
+
+    html #aufgaben_wrapper div {
+        width: 100%;
+    }
+}
+
+#aufgaben_wrapper div {
+    position: relative;
+    background-color: #00ABFF;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    overflow: hidden;
+    width: 47.5%;
+    margin: 0;
+    transition-duration: .25s;
+}
+
+#aufgaben_wrapper div h3, #aufgaben_wrapper div p {
+    margin: 0;
+    transition-duration: inherit;
+}
+
+#aufgaben_wrapper p {
+    color: #EEE;
+}
+
+#aufgaben_wrapper div:hover {
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #00ABFF;
+    /*box-shadow: 0 0 15px rgba(0,0,0,.15);*/
+}
+
+#aufgaben_wrapper div::before {
+    transition-duration: inherit;
+}
+
+#aufgaben_wrapper div:hover::before {
+    content: '👉';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    border-radius: 100%;
+    font-size: 2.75rem;
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, .1);
+    margin-right: 15px;
+    position: absolute;
+    animation: arrow_slide .4s forwards;
+}
+
+#aufgaben_wrapper.focussed {
+    padding: .75rem;
+    border-radius: 3px;
+    border: 1px solid #00ABFF;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .15);
+}
+
+@keyframes arrow_slide {
+    0% {
+        right: -35%;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes focussed {
+    0% {
+        border: 1px solid transparent;
+    }
+    50% {
+        border: 3px solid #00ABFF;
+    }
+    100% {
+        border: 1px solid transparent;
+    }
+}
+
+#aufgaben_wrapper div:hover p {
+    color: #202020;
+}
+
+footer {
+    background-color: #202020;
+    padding: 2.5rem 0;
+}
+
+footer section {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+    justify-content: center;
+}
+
+footer section p {
+    color: #D3D3D3;
+    margin: 0;
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}

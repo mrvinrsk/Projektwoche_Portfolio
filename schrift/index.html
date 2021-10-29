@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schrift - Marvin Roßkothen</title>
+
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <a href="../index.html" class="back">Zurück zur Hauptseite</a>
+
+    <main>
+        <h1>Joe's Restaurant <span class="info">@font-face</span></h1>
+        <p>
+            Nehmen Sie Platz in unserem Restaurant und genießen Sie Erlesenes für Gaumen und Sinne in einem stilvollen
+            Ambiente. Unser <span class="upper">Küchenchef</span> und sein Team verwöhnen Sie mit <span
+                class="underline">internationalen Spezialitäten</span> und <span class="underline">deftigen
+                Gerichten</span> aus der Nahe-Region. Bei uns finden Sie kulinarische <span
+                class="upper">Gaumenfreuden</span>, die selbst den Asketen zum
+            Schlemmen verleiten. Wir servieren Ihnen gerne ausgewählte Weine der Region, Spirituosen und alles, was Ihr
+            Herz begehrt. <span class="info">Google Fonts</span>
+        </p>
+
+        <p id="sys_font">
+            Zu besonderen Anlässen empfehlen wir Ihnen ein Festmenü oder ein kaltes Buffet, das wir ganz nach Ihren
+            individuellen Wünschen gestalten, auch für Geschäftsessen und Reisegesellschaften bieten wir den idealen
+            Rahmen. <span class="info">System-Font</span>
+        </p>
+
+        <hr style="margin-top: 2.5rem;" />
+
+        <div style="margin-top: 2.25rem;">
+            <div style="margin-bottom: .75rem;">
+                <h4>Allgemein genutztes CSS & Editor</h4>
+                <p style="margin: 0;">
+                    Diese CSS Regeln wurden im Allgemeinen für diese Seite verwendet. Einige Punkte wurden jedoch durch
+                    Inline-Styles, IDs und/oder Klassen individuell abgeändert.
+                </p>
+            </div>
+            <table id="css_settings">
+                <tr>
+                    <td colspan=2>
+                        <p style="color: #808080; text-align: center; margin: 0; font-size: 90%;">
+                            Die unten gelisteten Regeln werden in automatisch durch JavaScript angewandt und
+                            aufgelistet, somit sind Änderungen im Code immer aktuell. (HTML-Inspektor exklusiv.)
+                        </p>
+                        <p style="color: #00ABFF; font-weight: bold; text-align: center;">Klicke auf einen Wert, um ihn
+                            zu ändern.</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th style="width: 37.5%;">Wert</th>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        const css = [
+            ['font-family', '"Lato", sans-serif', false],
+            ['font-size', '14px', true],
+            ['line-height', '1.2rem', true],
+            ['color', '#252525', true],
+            ['letter-spacing', '1px', true],
+            ['word-spacing', '3px', true]
+        ];
+
+        css.forEach((css => {
+            $('body').css(css[0], css[1]);
+
+            if (css[2]) {
+                document.getElementById('css_settings').innerHTML += "<tr><td><p style='margin: 0;'>" + css[0] + "</p></td><td class='nopd'><input type='text' data-css-change='" + css[0] + "' value='" + css[1] + "'></td></tr>";
+            } else {
+                document.getElementById('css_settings').innerHTML += "<tr><td><p style='margin: 0;'>" + css[0] + "</p></td><td class='nopd'><input type='text' disabled value='" + css[1] + "'></td></tr>";
+            }
+        }));
+    </script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

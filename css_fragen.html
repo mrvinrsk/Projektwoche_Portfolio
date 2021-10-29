@@ -1,0 +1,130 @@
+<!doctype html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fragen CSS Nachname</title>
+
+  <link rel="stylesheet" href="css_fragen.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #202020;
+      color: #EEE;
+    }
+
+    main {
+      width: 85%;
+      margin: 3rem auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      text-decoration: underline;
+    }
+
+    h3:before {
+      content: 'Frage: ';
+    }
+
+    ul,
+    ol {
+      list-style-position: inside;
+    }
+
+    .back {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: #343434;
+      color: #00BBFF;
+      box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+      padding: .5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="index.html" class="back">Zurück zur Hauptseite</a>
+
+  <main>
+    <h1>Fragen zu CSS</h1>
+
+    <h3>Welche Aufgabe übernimmt HTML und welche CSS bei der Webseitengestaltung?</h3>
+    <p>HTML sorgt für das Layout und den Inhalt einer Seite, CSS wird zum Gestalten der Elemente genutzt</p>
+
+    <h3>Zählen Sie 4 verschiedene CSS-Selektoren auf.</h3>
+    <ol>
+      <li>Universalselektor</li>
+      <li>Klassenselektor</li>
+      <li>ID-Selektor</li>
+      <li>Elementselektor</li>
+      <li>Pseudoklassen</li>
+    </ol>
+
+    <h3>Was versteht man bei CSS unter &quot;Vererbung&quot;?</h3>
+    <p>Der Wert 'inherit' sorgt dafür, dass der Wert des Elternelements für das Kindelement übernommen wird.<br />
+      Hat beispielsweise ein &lt;div&gt; die Eigenschaft <code>color: #EEE;</code> und ein Text innerhalb dieses divs
+      <code>color: inherit;</code>, dann
+      wird dieser Text ebenfalls in #EEE angezeigt.
+    </p>
+
+    <h3>Welchen Vorteil haben externe CSS-Dateien?</h3>
+    <p>Eine externe CSS Datei sorgt für mehr Übersichtlichkeit und kann auf mehreren Seiten eingebunden werden, sodass
+      man
+      nicht immer wieder gleiche Regeln schreiben muss.</p>
+
+    <h3>Es soll eine Klasse mit dem Namen &quot;rot&quot; definiert werden. <br />
+      Wie muss der Klassenbezeichner in die CSS Datei eingetragen werden?</h3>
+    <pre><code>
+  .rot {
+    color: red;
+  }
+  </code></pre>
+
+    <h3>Welches Attribut bestimmt die Schriftart?</h3>
+    <pre><code>font-family: 'Family...', fallback;</code></pre>
+
+    <h3>Wie sieht der vom Attribut bestimmte Text aus?<br />
+      Bei: 1. font-style: italic?<br />
+    </h3>
+    <p>Kursiv (<i>Ich bin kursiv</i>)</p>
+
+    <h3>2. background-color: #ffffff?</h3>
+    <p>Weiß als Hintergrundfarbe</p>
+
+    <h3>3. text-decoration: underline?</h3>
+    <p>Unterstrichen</p>
+
+    <h3>4. font-weight: bold?</h3>
+    <p>Dick gedruckt</p>
+
+    <h3>5. color: #000000?</h3>
+    <p>Textfarbe schwarz</p>
+
+    <h3>
+      Sie haben in der externen CSS-Datei die h1-Überschrift mit color: #000000 definiert. <br />
+      Inline wird color: #FF0000 angegeben. Wie sieht Ihr Text aus?
+    </h3>
+    <p>Der Text kriegt die Farbe #FF0000, die inline definiert wurde, da, solange kein !important (bad practice)
+      verwendet
+      wird, inline immer priorisiert wird.</p>
+  </main>
+</body>
+
+</html>

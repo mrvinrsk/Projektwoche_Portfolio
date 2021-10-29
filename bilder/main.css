@@ -1,0 +1,29 @@
+article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+article div.abs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+article img {
+    width: 400px;
+}
+
+.css {
+    margin-top: 1rem;
+}
+
+input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    outline: none;
+}

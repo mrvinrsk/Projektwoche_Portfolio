@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div class="popup_wrapper" id="ga_not_yet">
+        <div class="popup">
+            <h3>Noch nicht verfügbar.</h3>
+            <p>
+                Die Gruppenarbeit ist voraussichtlich erst ab dem 09.11.2021 hier verfügbar. Ich bitte um ein wenig
+                Geduld. 🤔
+            </p>
+
+            <div style="display: flex; justify-content: flex-end; margin-top: 2rem;">
+                <button onclick="togglePopup('ga_not_yet');"
+                    style="cursor: pointer; border: none; padding: .5rem 1rem; border-radius: 3px; background-color: #00ABFF; color: #FFF;">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="navigator_bg"></div>
+    <nav id="navigator">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#aufgaben">Aufgaben</a></li>
+            <li onclick="togglePopup('ga_not_yet');"><a href="#">Gruppenarbeit</a></li>
+            <li id="hamburger"><i class="bi bi-list"></i></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div>
+            <h1 id="title">Portfolio</h1>
+        </div>
+
+        <div id="start">
+            <div>
+                <p id="greeting"></p>
+            </div>
+
+            <section id="heading">
+                <div>
+                    <h3 id="subtitle">
+                        Dies ist das Portfolio von <span style="color: inherit;"
+                            data-tooltip="Marvin Roßkothen ist 20 Jahre alt und besucht das BKO im Zusammengang mit seiner Ausbildung zum Mediengestalter bei der dsa Marketing Agentur.">Marvin
+                            Roßkothen</span> aus der <span style="color: inherit;"
+                            data-tooltip="Die MG-21-2 ist eine Klasse am Berufskolleg Essen Ost zur Ausbildung von Mediengestaltern in Digital & Print.">MG-21-2</span>.
+                    </h3>
+
+                    <p id="text">
+                        Ich bin 20 Jahre alt und beschäftige mich inzwischen seit einigen Jahren mit Webdevelopment,
+                        weswegen ich an diesem Projekt - bzw. dessen Erweiterung - ziemlich viel Spaß hatte.
+                        Nachdem ich die Grundaufgaben erledigt hatte, habe ich mich daran gemacht die Seiten mithilfe
+                        von JavaScript (& teils jQuery) um Funktionalitäten zu erweitern. Dazu zählt bspw. auf dieser
+                        Seite die Animation, sowie bei der <a href="schrift/index.html">Schrift-Aufgabe</a> die Tabelle,
+                        in der automatisch das angewandte CSS dargestellt wird und bearbeitet werden kann, aber auch
+                        Kleinigkeiten, wie dass man auf dieser Seite je nach Tageszeit im Banner begrüßt wird und die
+                        Uhrzeit immer Live angezeigt wird.
+                    </p>
+                </div>
+
+                <img src="profilbild.png" id="pb" />
+            </section>
+        </div>
+
+        <div id="aufgaben">
+            <h2 style="margin:0;">Aufgaben</h2>
+            <p style="margin:0;">
+                Hier findest du alle bearbeiteten Aufgaben. Klicke einfach auf eine Verlinkung.
+            </p>
+
+            <div id="aufgaben_wrapper">
+                <div onclick="window.location = 'suedamerika/index.html';">
+                    <h3>Südamerika</h3>
+                    <p>Ein simples Website-Layout mit CSS.</p>
+                </div>
+
+                <div onclick="window.location = 'css_fragen.html';">
+                    <h3>CSS Fragen</h3>
+                    <p>Simple Fragen zu CSS beantwortet.</p>
+                </div>
+
+                <div onclick="window.location = 'schrift/index.html';">
+                    <h3>Schrift</h3>
+                    <p>Spielereien mit CSS Schrift Regeln.</p>
+                </div>
+
+                <div
+                    onclick="document.getElementById('aufgaben_wrapper').classList.add('focussed'); setTimeout(function() { document.getElementById('aufgaben_wrapper').classList.remove('focussed'); }, 2500);">
+                    <h3>Navigation</h3>
+                    <p>Genau hier zu finden.</p>
+                </div>
+
+                <div onclick="window.location = 'bilder/index.html';">
+                    <h3>Bilder</h3>
+                    <p>Bilder und deren CSS Regeln.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="diary">
+            <section id="diary_title">
+                <h2>Verlauf</h2>
+                <h2>[Neu -> Alt]</h2>
+            </section>
+
+            <section id="diary_wrapper"></section>
+        </div>
+    </main>
+
+    <footer>
+        <section>
+            <div>
+                <img src="profilbild.png" />
+                <p>
+                    Dieses Portfolio ist im Laufe der Projektwoche, im Zeitraum vom 27.10-09.11 am Berufskolleg Essen
+                    Ost, von Marvin Roßkothen erstellt worden.
+                </p>
+            </div>
+
+            <!-- <div></div> -->
+        </section>
+    </footer>
+</body>
+
+</html>
