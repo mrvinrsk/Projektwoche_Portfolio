@@ -1,3 +1,7 @@
+p, span {
+    z-index: -1;
+}
+
 #title {
     margin: 2.5rem 0 0;
     text-align: center;
@@ -64,6 +68,7 @@
     height: auto;
     border-radius: 100%;
     border: 1px solid black;
+    z-index: -1;
 }
 
 @media screen and (max-width: 1000px) {
@@ -148,7 +153,7 @@ p.diary_text {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     gap: .5rem;
     overflow: visible;
@@ -164,8 +169,9 @@ p.diary_text {
     }
 }
 
-#aufgaben_wrapper div {
+#aufgaben_wrapper a {
     position: relative;
+    text-decoration: none;
     background-color: #00ABFF;
     border: 1px solid transparent;
     border-radius: 3px;
@@ -188,18 +194,18 @@ p.diary_text {
     color: #EEE;
 }
 
-#aufgaben_wrapper div:hover {
+#aufgaben_wrapper a:hover {
     cursor: pointer;
     background-color: white;
     border: 1px solid #00ABFF;
     /*box-shadow: 0 0 15px rgba(0,0,0,.15);*/
 }
 
-#aufgaben_wrapper div::before {
+#aufgaben_wrapper a::before {
     transition-duration: inherit;
 }
 
-#aufgaben_wrapper div:hover::before {
+#aufgaben_wrapper a:hover::before {
     content: '👉';
     display: flex;
     align-items: center;
@@ -211,6 +217,16 @@ p.diary_text {
     margin-right: 15px;
     position: absolute;
     animation: arrow_slide .4s forwards;
+    cursor: inherit;
+}
+
+#aufgaben_wrapper a:hover h3 {
+    cursor: inherit;
+}
+
+#aufgaben_wrapper a:hover p {
+    color: #202020;
+    cursor: inherit;
 }
 
 #aufgaben_wrapper.focussed {
@@ -239,10 +255,6 @@ p.diary_text {
     100% {
         border: 1px solid transparent;
     }
-}
-
-#aufgaben_wrapper div:hover p {
-    color: #202020;
 }
 
 footer {

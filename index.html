@@ -12,10 +12,25 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
 </head>
 
 <body>
+    <ul class="context" id="global_context">
+        <p style="text-align: center;">Portfolio by Marvin</p>
+        <li><a href="http://github.mrvinrsk.de/Projektwoche_Portfolio"><i class="bi bi-github"></i>Auf GitHub
+                anzeigen</a></li>
+        <li><a onclick="copyTextToClipboard(window.location); this.parentNode.parentNode.classList.remove('visible');"><i
+                    class="bi bi-clipboard"></i>URL kopieren</a></li>
+    </ul>
+
+    <ul class="context" id="link_context">
+        <li><a href="" id="newtab" target="_blank"><i class="bi bi-file-code-fill"></i>Link in neuem Tab öffnen</a></li>
+        <li><a onclick="copyTextToClipboard(this.parentNode.parentNode.querySelector('#newtab').href); this.parentNode.parentNode.classList.remove('visible');"><i class="bi bi-clipboard"></i>Link kopieren</a></li>
+    </ul>
+
     <div class="popup_wrapper" id="ga_not_yet">
         <div class="popup">
             <h3>Noch nicht verfügbar.</h3>
@@ -34,10 +49,10 @@
     <div id="navigator_bg"></div>
     <nav id="navigator">
         <ul>
-            <li id="logo"><a href="#"><img src="profilbild.png"/></a></li>
+            <li id="logo"><a href="#"><img src="profilbild.png" /></a></li>
             <li><a href="#">Home</a></li>
             <li><a href="#aufgaben">Aufgaben</a></li>
-            <li><a href="#aufgaben">Protokoll</a></li>
+            <li><a href="#verlauf">Protokoll</a></li>
             <li onclick="togglePopup('ga_not_yet');"><a href="#">Gruppenarbeit</a></li>
             <li id="hamburger"><i class="bi bi-list"></i></li>
         </ul>
@@ -66,7 +81,8 @@
                         Ich bin 20 Jahre alt und beschäftige mich inzwischen seit einigen Jahren mit Webdevelopment,
                         weswegen ich an diesem Projekt - bzw. dessen Erweiterung - ziemlich viel Spaß hatte.
                         Nachdem ich die Grundaufgaben erledigt hatte, habe ich mich daran gemacht die Seiten mithilfe
-                        von JavaScript (& teils jQuery) um Funktionalitäten zu erweitern. Dazu zählt bspw. auf dieser
+                        von JavaScript (& teils <a href="https://jquery.com/">jQuery</a>) um Funktionalitäten zu
+                        erweitern. Dazu zählt bspw. auf dieser
                         Seite die Animation, sowie bei der <a href="schrift/index.html">Schrift-Aufgabe</a> die Tabelle,
                         in der automatisch das angewandte CSS dargestellt wird und bearbeitet werden kann, aber auch
                         Kleinigkeiten, wie dass man auf dieser Seite je nach Tageszeit im Banner begrüßt wird und die
@@ -78,38 +94,38 @@
             </section>
         </div>
 
-        <div id="aufgaben">
+        <div id="aufgaben" data-scroll-offset="110">
             <h2 style="margin:0;">Aufgaben</h2>
             <p style="margin:0;">
                 Hier findest du alle bearbeiteten Aufgaben. Klicke einfach auf eine Verlinkung.
             </p>
 
             <div id="aufgaben_wrapper">
-                <div onclick="window.location = 'suedamerika/index.html';">
+                <a href="suedamerika/index.html">
                     <h3>Südamerika</h3>
                     <p>Ein simples Website-Layout mit CSS.</p>
-                </div>
+                </a>
 
-                <div onclick="window.location = 'css_fragen.html';">
+                <a href="css_fragen.html">
                     <h3>CSS Fragen</h3>
                     <p>Simple Fragen zu CSS beantwortet.</p>
-                </div>
+                </a>
 
-                <div onclick="window.location = 'schrift/index.html';">
+                <a href="schrift/index.html">
                     <h3>Schrift</h3>
                     <p>Spielereien mit CSS Schrift Regeln.</p>
-                </div>
+                </a>
 
-                <div
+                <a
                     onclick="document.getElementById('aufgaben_wrapper').classList.add('focussed'); setTimeout(function() { document.getElementById('aufgaben_wrapper').classList.remove('focussed'); }, 2500);">
                     <h3>Navigation</h3>
                     <p>Genau hier zu finden.</p>
-                </div>
+                </a>
 
-                <div onclick="window.location = 'bilder/index.html';">
+                <a href="bilder/index.html">
                     <h3>Bilder</h3>
                     <p>Bilder und deren CSS Regeln.</p>
-                </div>
+                </a>
             </div>
         </div>
 
@@ -119,7 +135,8 @@
 
                 <div style="display: flex; justify-content: flex-end; column-gap: .75rem; align-items: center;">
                     <h4 id="diary_sorting" style="font-style: italic; display: inline;"></h4>
-                    <button onclick='new_old = !new_old; updateDiary();' style="cursor: pointer; display: inline; border: none; padding: .5rem 1rem; background-color: #00ABFF; color: #EEE; border-radius: 2px;">Reihenfolge
+                    <button onclick='new_old = !new_old; updateDiary();'
+                        style="cursor: pointer; display: inline; border: none; padding: .5rem 1rem; background-color: #00ABFF; color: #EEE; border-radius: 2px;">Reihenfolge
                         umkehren</button>
                 </div>
             </section>
