@@ -19,6 +19,8 @@
 </head>
 
 <body>
+    <p id="dark_toggle" onclick="updateMode()"></p>
+
     <ul class="context" id="global_context">
         <p style="text-align: center; margin-bottom: .5rem; text-decoration: underline; color: #00ABFF;">Portfolio by
             Marvin</p>
@@ -186,6 +188,23 @@
             </div>
         </section>
     </footer>
+
+    <script>
+        function updateMode() {
+            const body = document.body;
+            const toggler = document.getElementById('dark_toggle');
+
+            body.classList.toggle("dark");
+
+            if(!body.classList.contains("dark")) {
+                toggler.innerText = "Licht aus";
+            }else {
+                toggler.innerText = "Licht an";
+            }
+        }
+
+        updateMode();
+    </script>
 </body>
 
 </html>

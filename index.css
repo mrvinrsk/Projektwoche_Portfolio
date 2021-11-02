@@ -19,6 +19,10 @@ p, span {
     color: #EEE;
 }
 
+body {
+    transition-duration: .25s;
+}
+
 #greeting:hover {
     transform: scale(1.1);
     cursor: default;
@@ -272,7 +276,6 @@ footer #links {
     html footer #links {
         align-items: flex-end;
     }
-
     html footer section {
         flex-direction: row;
     }
@@ -314,11 +317,9 @@ footer #links ul li a {
     html footer section {
         width: 85%;
     }
-
     html footer #footer_info {
         width: 100%;
     }
-
     html footer #links {
         width: 25%;
     }
@@ -328,4 +329,42 @@ footer img {
     width: 80px;
     height: 80px;
     border-radius: 100%;
+}
+
+/* Darkmode */
+body.dark {
+    background-color: #202020;
+    color: #EEE;
+}
+
+html body.dark h1, html body.dark h2, html body.dark h3, html body.dark h4, html body.dark h5, html body.dark h6 {
+    color: #00ABFF;
+}
+
+body.dark #text {
+    color: inherit;
+}
+
+body.dark img {
+    filter: grayscale(65%);
+}
+
+body.dark #aufgaben p {
+    color: inherit;
+}
+
+body.dark #aufgaben a:hover {
+    background-color: #202020;
+}
+
+body.dark #aufgaben a:hover h3 {
+    color: #00ABFF;
+}
+
+body.dark #aufgaben a, body.dark #verlauf .diary_entry {
+    background-color: #1c516b;
+}
+
+body.dark .diary_date, body.dark #aufgaben h3 {
+    color: #202020;
 }
