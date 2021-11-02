@@ -11,13 +11,19 @@
     color: #EEE;
 }
 
+html body {
+    background-color: #FFF;
+}
+
+html.dark body {
+    background-color: #202020;
+}
+
 h1, h2, h3, h4, h5, h6 {
+    color: #00ABFF;
     overflow: visible;
 }
 
-html, body {
-    background-color: #FFF;
-}
 
 main {
     margin: 5rem auto;
@@ -50,6 +56,11 @@ main {
     padding: .5rem 1rem;
     text-decoration: none;
     border-radius: 5px;
+}
+
+html.dark .back {
+    background-color: #454545;
+    color: #EEE;
 }
 
 a {

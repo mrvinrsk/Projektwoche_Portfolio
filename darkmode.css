@@ -1,0 +1,44 @@
+html, body {
+    transition-duration: .25s;
+}
+
+#dark_toggle {
+    position: fixed;
+    z-index: 9999;
+    cursor: pointer;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 5px;
+    padding: .5rem 2.5rem;
+    background-color: #202020;
+    color: #EEE;
+    box-shadow: 0 0 10px rgba(0 0 0 / 25%), 0 0 35px rgba(0 0 0 / 5%);
+    transition-duration: .25s;
+}
+
+html.dark #dark_toggle {
+    background-color: #EEE;
+    color: #202020;
+}
+
+html.dark {
+    background-color: #202020;
+    color: #EEE;
+}
+
+html html.dark h1, html html.dark h2, html html.dark h3, html html.dark h4, html html.dark h5, html html.dark h6 {
+    color: #00ABFF;
+}
+
+html.dark #text {
+    color: inherit;
+}
+
+html.dark .popup {
+    background-color: #343434;
+    color: #EEE;
+}
+
+html.dark .popup p {
+    color: inherit;
+}

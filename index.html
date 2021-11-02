@@ -10,17 +10,17 @@
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="darkmode.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
     <script src="animation.js" defer></script>
+    <script src="darkmode.js" defer></script>
 </head>
 
 <body>
-    <p id="dark_toggle" onclick="updateMode()"></p>
-
     <ul class="context" id="global_context">
         <p style="text-align: center; margin-bottom: .5rem; text-decoration: underline; color: #00ABFF;">Portfolio by
             Marvin</p>
@@ -111,7 +111,7 @@
 
         <div id="aufgaben" data-scroll-offset="110">
             <h2 style="margin:0;">Aufgaben</h2>
-            <p style="margin:0;">
+            <p style="margin:0;" id="aufgaben_info">
                 Hier findest du alle bearbeiteten Aufgaben. Klicke einfach auf eine Verlinkung.
             </p>
 
@@ -190,20 +190,7 @@
     </footer>
 
     <script>
-        function updateMode() {
-            const body = document.body;
-            const toggler = document.getElementById('dark_toggle');
-
-            body.classList.toggle("dark");
-
-            if(!body.classList.contains("dark")) {
-                toggler.innerText = "Licht aus";
-            }else {
-                toggler.innerText = "Licht an";
-            }
-        }
-
-        updateMode();
+        
     </script>
 </body>
 

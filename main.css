@@ -6,26 +6,9 @@ html, body {
     line-height: 1.45rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #00FA;
-    overflow: visible;
-}
-
 p, span {
-    color: #343434;
     position: relative;
     z-index: -1;
-}
-
-#dark_toggle {
-    position: fixed;
-    z-index: 9999;
-    cursor: pointer;
-    right: 0;
-    bottom: 0;
-    border-top-left-radius: 5px;
-    padding: .5rem 2.5rem;
-    background-color: #00ABFF;
 }
 
 #navigator {
@@ -44,7 +27,7 @@ img {
     transition-duration: filter .25s;
 }
 
-body.dark #navigator {
+html.dark #navigator {
     background-color: #1c516b;
 }
 

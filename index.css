@@ -19,10 +19,6 @@ p, span {
     color: #EEE;
 }
 
-body {
-    transition-duration: .25s;
-}
-
 #greeting:hover {
     transform: scale(1.1);
     cursor: default;
@@ -189,13 +185,16 @@ p.diary_text {
     border: 2px solid #00699e;
 }
 
-#aufgaben_wrapper div h3, #aufgaben_wrapper div p {
-    margin: 0;
-    transition-duration: inherit;
+#aufgaben_wrapper a h3, #verlauf .diary_date {
+    color: #343434;
 }
 
-#aufgaben_wrapper p {
-    color: #EEE;
+html.dark #aufgaben_wrapper a h3 {
+    color: #00ABFF;
+}
+
+html.dark #verlauf .diary_date {
+    color: #00ABFF;
 }
 
 #aufgaben_wrapper a:hover {
@@ -229,7 +228,6 @@ p.diary_text {
 }
 
 #aufgaben_wrapper a:hover p {
-    color: #202020;
     cursor: inherit;
 }
 
@@ -331,40 +329,31 @@ footer img {
     border-radius: 100%;
 }
 
-/* Darkmode */
-body.dark {
-    background-color: #202020;
+#aufgaben p, html.dark body main #aufgaben_info {
     color: #EEE;
 }
 
-html body.dark h1, html body.dark h2, html body.dark h3, html body.dark h4, html body.dark h5, html body.dark h6 {
-    color: #00ABFF;
+html body #aufgaben_info {
+    color: #343434;
 }
 
-body.dark #text {
-    color: inherit;
-}
-
-body.dark img {
-    filter: grayscale(65%);
-}
-
-body.dark #aufgaben p {
-    color: inherit;
-}
-
-body.dark #aufgaben a:hover {
+/* Darkmode */
+html.dark #aufgaben a:hover {
     background-color: #202020;
 }
 
-body.dark #aufgaben a:hover h3 {
+html.dark #aufgaben a:hover h3 {
     color: #00ABFF;
 }
 
-body.dark #aufgaben a, body.dark #verlauf .diary_entry {
+html.dark #aufgaben a, html.dark #verlauf .diary_entry {
     background-color: #1c516b;
 }
 
-body.dark .diary_date, body.dark #aufgaben h3 {
+html.dark .diary_date, html.dark #aufgaben h3 {
     color: #202020;
+}
+
+html.dark img {
+    filter: grayscale(65%);
 }

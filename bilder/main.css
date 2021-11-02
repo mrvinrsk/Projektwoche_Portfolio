@@ -24,6 +24,10 @@ article div.abs {
     transform: translateX(0);
 }
 
+html.dark article div.abs {
+    background-color: #343434;
+}
+
 .left {
     animation: slide_f_left .5s forwards;
 }
@@ -100,9 +104,15 @@ div.abs section h4, div.abs section p, div.abs section input {
 }
 
 input {
+    background-color: transparent;
     width: 50px;
     text-align: center;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, .5);
     outline: none;
+}
+
+html.dark input {
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
 }
