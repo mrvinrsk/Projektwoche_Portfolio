@@ -198,8 +198,14 @@ a.back {
     display: flex;
     flex-direction: column;
     background-color: #FFF;
+    color: #202020;
     box-shadow: 0 0 15px rgba(0, 0, 0, .15), 0 0 50px rgba(0, 0, 0, .1);
     row-gap: .175rem;
+}
+
+html.dark .context {
+    color: #EEE;
+    background-color: #343434;
 }
 
 .context.visible {
@@ -228,6 +234,10 @@ a.back {
     cursor: pointer;
     background-color: #00ABFF;
     color: #EEE;
+}
+
+html.dark li:hover {
+    background-color: #1c516b;
 }
 
 .context i {

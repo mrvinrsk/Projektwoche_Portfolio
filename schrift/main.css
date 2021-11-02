@@ -61,16 +61,32 @@ td, th {
 }
 
 input {
+    background-color: transparent;
     padding: .5rem;
     border: 0;
     width: 100%;
     height: 100%;
+    outline: none;
+    border: 2px solid transparent;
     cursor: pointer;
+    transition-duration: .25s;
+}
+
+input:focus-within {
+    border: 2px solid #00ABFF;
+}
+
+html.dark input {
+    color: #EEE;
 }
 
 html input[disabled] {
     background-color: #EEE;
     cursor: not-allowed;
+}
+
+html.dark input[disabled] {
+    background-color: #343434;
 }
 
 #joes_1 {
@@ -104,10 +120,17 @@ div.fonts {
 
 .text {
     width: 100%;
+    background-color: #FFF;
+    padding: .5rem;
+    border-radius: 5px;
+    transition-duration: .25s;
+}
+
+html.dark .text {
+    background-color: #d3d3d3;
 }
 
 #one {
-    background-color: #fff;
     color: #343434;
     font-family: "Courier New";
     font-feature-settings: "'liga' 1";
@@ -124,7 +147,6 @@ div.fonts {
 }
 
 #two {
-    background-color: #fff;
     color: #343434;
     font-family: Verdana;
     font-feature-settings: "'liga' 1";
@@ -141,7 +163,6 @@ div.fonts {
 }
 
 #three {
-    background-color: #fff;
     color: #343434;
     font-family: "Trebuchet MS";
     font-feature-settings: "'liga' 1";

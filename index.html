@@ -74,6 +74,10 @@
     </nav>
 
     <main id="start">
+        <div id="uff">
+            
+        </div>
+
         <div>
             <h1 id="title">Portfolio</h1>
         </div>
@@ -190,7 +194,14 @@
     </footer>
 
     <script>
-        
+        /* Load Text */
+        const txt = [
+            "Mir war ein wenig zu langweilig, lol.",
+            "Dieses Projekt besteht (abgesehen von AnimeJS) zu ca. 14% aus JavaScript.",
+            "Schon mal 'nen Rechtsklick versucht?"
+        ];
+
+        document.getElementById('uff').innerText = txt[Math.floor(Math.random() * txt.length)];
     </script>
 </body>
 

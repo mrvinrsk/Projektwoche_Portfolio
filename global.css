@@ -86,14 +86,24 @@ a {
     width: 100%;
     min-width: 40vw;
     text-align: left;
+    font-weight: normal;
+    font-size: .95rem;
     height: auto;
     top: calc(100% + 10px);
     left: 50%;
     background-color: #FFF;
+    color: #343434;
     box-shadow: 0 0 15px rgba(0, 0, 0, .1), 0 0 50px rgba(0, 0, 0, .075);
-    padding: .5rem .75rem;
+    padding: 1rem;
+    border: 2px solid #00ABFF;
     border-radius: 3px;
     z-index: 999;
+}
+
+html.dark [data-tooltip]:hover::before {
+    background-color: #343434;
+    color: #EEE;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .45), 0 0 50px rgba(0, 0, 0, .25);
 }
 
 @media screen and (max-width: 700px) {

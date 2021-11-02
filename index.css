@@ -2,6 +2,23 @@ p, span {
     z-index: -1;
 }
 
+#uff {
+    margin-top: 1rem;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid #00ABFF;
+    border-radius: 3px;
+    padding: .5rem;
+}
+
+@media screen and (min-width: 850px) {
+    html #uff {
+        width: 65%;
+    }
+}
+
 #title {
     margin: 2.5rem 0 0;
     text-align: center;
@@ -39,9 +56,10 @@ p, span {
     left: 50%;
     z-index: -1;
     background-color: #00ABFF;
-    border: 1px solid #0066FF;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     transform: skewX(-10deg) translate(-50%, -0%);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0 0 0 / 15%), 0 0 30px rgba(0 0 0 / 10%);
 }
 
 #start {
@@ -108,7 +126,7 @@ p, span {
 }
 
 #diary_sorting::before {
-    content: 'Sortierung: [';
+    content: 'Sortierung: ';
 }
 
 #diary_sorting::after {
@@ -228,6 +246,7 @@ html.dark #verlauf .diary_date {
 }
 
 #aufgaben_wrapper a:hover p {
+    color: #343434;
     cursor: inherit;
 }
 
@@ -346,6 +365,11 @@ html.dark #aufgaben a:hover h3 {
     color: #00ABFF;
 }
 
+html.dark #aufgaben_wrapper a:hover p {
+    color: #EEE;
+    cursor: inherit;
+}
+
 html.dark #aufgaben a, html.dark #verlauf .diary_entry {
     background-color: #1c516b;
 }
@@ -356,4 +380,8 @@ html.dark .diary_date, html.dark #aufgaben h3 {
 
 html.dark img {
     filter: grayscale(65%);
+}
+
+html.dark #greeting:after {
+    background-color: #1c516b;
 }
