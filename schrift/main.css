@@ -72,3 +72,80 @@ html input[disabled] {
     background-color: #EEE;
     cursor: not-allowed;
 }
+
+#joes_1 {
+    display: block;
+    margin-top: 1.25rem;
+}
+
+div.fonts_wrapper {
+    margin-top: 2rem;
+}
+
+div.fonts_wrapper h3 {
+    margin-bottom: .3rem;
+}
+
+div.fonts {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    justify-content: space-between;
+    align-items: stretch;
+    font-size: 10px;
+}
+
+.text {
+    width: 100%;
+}
+
+#one {
+    background-color: #fff;
+    color: #343434;
+    font-family: "Courier New";
+    font-feature-settings: "'liga' 1";
+    font-kerning: auto;
+    font-style: normal;
+    font-size: 1.45em;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.125em;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+    word-spacing: -0.1em;
+}
+
+#two {
+    background-color: #fff;
+    color: #343434;
+    font-family: Verdana;
+    font-feature-settings: "'liga' 1";
+    font-kerning: auto;
+    font-style: normal;
+    font-size: 1.25em;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    line-height: 1.25em;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+    word-spacing: 0.05em;
+}
+
+#three {
+    background-color: #fff;
+    color: #343434;
+    font-family: "Trebuchet MS";
+    font-feature-settings: "'liga' 1";
+    font-kerning: auto;
+    font-style: normal;
+    font-size: 1.4em;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    line-height: 1.125em;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+    word-spacing: 0.1em;
+}

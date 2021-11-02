@@ -147,7 +147,7 @@
                 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
                 var _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
 
-                if (window.scrollY >= el.offsetTop - 800 || window.scrollY >= (_docHeight - (vh - 100))) {
+                if (window.scrollY >= el.offsetTop - 900 || window.scrollY >= (_docHeight - (vh - 100))) {
                     if (!el.classList.contains('left') && !el.classList.contains('right')) {
                         if (left) {
                             //el.style.animation = "slide_f_left .5s forwards";
@@ -159,7 +159,7 @@
                         left = !left;
                     }
                 }else {
-                    el.classList.remove('left', 'right');
+                    //el.classList.remove('left', 'right');
                 }
             });
         }

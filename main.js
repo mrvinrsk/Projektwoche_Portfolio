@@ -140,9 +140,7 @@ $(document).ready(function () {
 function hideAllContextmenus(not) {
     document.querySelectorAll('.context').forEach((el) => {
         if (not) {
-            console.log('element given:' + not.id);
             if (not.id !== el.id) {
-                console.log(el.id, "removed");
                 el.classList.remove('visible');
                 el.style.top = "-300%";
             }
@@ -165,10 +163,6 @@ function setContextmenu(el, e, not) {
 
         setTimeout(() => {
             el.classList.add('visible');
-
-            console.log(el.offsetWidth, el.offsetHeight);
-
-
 
             if (vh - (e.clientY - 800) >= (e.clientY - (el.offsetHeight + 50))) {
                 el.style.top = (e.clientY - 4) + "px";
@@ -211,8 +205,6 @@ document.getElementById('copy_text').addEventListener('click', () => {
         document.getElementById('copy_text').parentNode.parentNode.classList.remove('visible');
     }, 2);
 });
-
-console.log(vw, vh);
 
 /* Link Contextmenu */
 let link_context = document.getElementById('link_context');

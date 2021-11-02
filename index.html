@@ -61,8 +61,8 @@
     <div id="navigator_bg"></div>
     <nav id="navigator">
         <ul>
-            <li id="logo"><a href="#"><img src="profilbild.png" /></a></li>
-            <li><a href="#">Home</a></li>
+            <li id="logo"><a href="#start"><img src="profilbild.png" /></a></li>
+            <li><a href="#start">Home</a></li>
             <li><a href="#aufgaben">Aufgaben</a></li>
             <li><a href="#verlauf">Protokoll</a></li>
             <li onclick="togglePopup('ga_not_yet');"><a href="#">Gruppenarbeit</a></li>
@@ -70,7 +70,7 @@
         </ul>
     </nav>
 
-    <main>
+    <main id="start">
         <div>
             <h1 id="title">Portfolio</h1>
         </div>
@@ -123,14 +123,14 @@
                     <p>Simple Fragen zu CSS beantwortet.</p>
                 </a>
 
-                <a href="schrift/index.html">
+                <a class="border" href="schrift/index.html">
                     <h3>Schrift</h3>
                     <p>Spielereien mit CSS Schrift Regeln.</p>
                 </a>
 
-                <a
+                <a class="border"
                     onclick="document.getElementById('aufgaben_wrapper').classList.add('focussed'); setTimeout(function() { document.getElementById('aufgaben_wrapper').classList.remove('focussed'); }, 2500);">
-                    <h3>Navigation</h3>
+                    <h3>Navigation*</h3>
                     <p>Genau hier zu finden.</p>
                 </a>
 
@@ -147,13 +147,17 @@
 
                 <div style="display: flex; justify-content: flex-end; column-gap: .75rem; align-items: center;">
                     <h4 id="diary_sorting" style="font-style: italic; display: inline;"></h4>
-                    <button onclick='new_old = !new_old; updateDiary();'
-                        style="cursor: pointer; display: inline; border: none; padding: .5rem 1rem; background-color: #00ABFF; color: #EEE; border-radius: 2px;">Reihenfolge
+                    <button onclick='//new_old = !new_old; updateDiary();'
+                        style="cursor: pointer; display: inline; border: none; padding: .5rem 1rem; background-color: #D3D3D3; color: #EEE; border-radius: 2px;">Reihenfolge
                         umkehren</button>
                 </div>
             </section>
 
             <section id="diary_wrapper"></section>
+        </div>
+
+        <div style="margin-top: 5rem; color: #d3d3d3;">
+            <p style="color: inherit;">*) Für die Navigation im Gruppenprojekt werden wir die Navigationsleiste dieser Seite in angepasst verwenden.</p>
         </div>
     </main>
 

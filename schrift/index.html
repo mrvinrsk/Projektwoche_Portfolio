@@ -17,7 +17,7 @@
     <a href="../index.html" class="back">Zurück zur Hauptseite</a>
 
     <main>
-        <h1>Joe's Restaurant <span class="info">@font-face</span></h1>
+        <h1>Font Sandbox <span class="info">@font-face</span></h1>
         <p>
             Nehmen Sie Platz in unserem Restaurant und genießen Sie Erlesenes für Gaumen und Sinne in einem stilvollen
             Ambiente. Unser <span class="upper">Küchenchef</span> und sein Team verwöhnen Sie mit <span
@@ -33,8 +33,9 @@
             individuellen Wünschen gestalten, auch für Geschäftsessen und Reisegesellschaften bieten wir den idealen
             Rahmen. <span class="info">System-Font</span>
         </p>
-
-        <hr style="margin-top: 2.5rem;" />
+        <a id="joes_1" href="joes_1.html">Griechisches Restaurant</a>
+        <a href="joes_2.html">Steakhouse</a>
+        <a href="checkliste.html">Checkliste</a>
 
         <div style="margin-top: 2.25rem;">
             <div style="margin-bottom: .75rem;">
@@ -62,13 +63,32 @@
                 </tr>
             </table>
         </div>
+
+        <hr style="margin-top: 2.5rem;" />
+
+        <div class="fonts_wrapper">
+            <h3>03_Schriftgestaltung_Fließtext</h3>
+            <div class="fonts">
+                <div id="one" class="text"></div>
+                <div id="two" class="text"></div>
+                <div id="three" class="text"></div>
+            </div>
+        </div>
+
+        <script>
+            document.querySelectorAll('.text').forEach((el) => {
+                el.innerText = "Somebody once told me the world is gonna roll me. I ain't the sharpest tool in the shed. She was looking kind of dumb with her finger and her thumb. In the shape of an \"L\" on her forehead. Well the years start coming and they don't stop coming. Fed to the rules and I hit the ground running. Didn't make sense not to live for fun. Your brain gets smart but your head gets dumb. So much to do, so much to see. So what's wrong with taking the back streets? You'll never know if you don't go. You'll never shine if you don't glow. Hey now, you're an all-star, get your game on, go play. Hey now, you're a rock star, get the show on, get paid. And all that glitters is gold. Only shooting stars break the mold";
+            });
+        </script>
     </main>
 
     <script>
         const css = [
             ['font-family', '"Rubik", sans-serif', false],
             ['font-size', '14px', true],
+            ['text-align', 'left', true],
             ['line-height', '1.2rem', true],
+            ['font-weight', 'normal', true],
             ['color', '#252525', true],
             ['letter-spacing', '1px', true],
             ['word-spacing', '3px', true]

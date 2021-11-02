@@ -223,6 +223,7 @@ a.back {
     border-radius: inherit;
     background-color: inherit;
     transition-duration: .125s;
+    font-size: 14px;
 }
 
 .context li a {
@@ -243,7 +244,7 @@ a.back {
 }
 
 .context i {
-    font-size: 150%;
+    font-size: 175%;
 }
 
 .context a {

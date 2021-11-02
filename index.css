@@ -76,22 +76,18 @@ p, span {
         flex-direction: column-reverse;
         row-gap: 2rem;
     }
-
     html #heading #subtitle {
         font-size: 1.35rem;
         text-align: center;
     }
-
     html #heading #pb {
         width: 225px;
     }
-
     html #heading #text {
         width: 100%;
         text-align: center;
     }
 }
-
 
 #nav_info {
     cursor: pointer;
@@ -112,7 +108,7 @@ p, span {
 }
 
 #diary_sorting::before {
-    content: 'Sortiert nach: [';
+    content: 'Sortierung: [';
 }
 
 #diary_sorting::after {
@@ -163,7 +159,6 @@ p.diary_text {
     html #aufgaben_wrapper {
         flex-direction: column;
     }
-
     html #aufgaben_wrapper a {
         width: 100%;
     }
@@ -183,6 +178,10 @@ p.diary_text {
     width: 47.5%;
     margin: 0;
     transition-duration: .25s;
+}
+
+#aufgaben_wrapper a.border {
+    border: 2px solid #00699e;
 }
 
 #aufgaben_wrapper div h3, #aufgaben_wrapper div p {

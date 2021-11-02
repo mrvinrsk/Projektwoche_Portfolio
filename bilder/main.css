@@ -1,9 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 article {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
     overflow: hidden;
-    padding: 2rem;
 }
 
 article div.abs {
@@ -15,7 +18,7 @@ article div.abs {
     column-gap: 1.5rem;
     background-color: #FFF;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .15), 0 0 35px rgba(0, 0, 0, .075);
+    border: 1px solid rgba(211, 211, 211, .7);
     overflow: hidden;
     padding: 1rem;
     transform: translateX(0);
@@ -34,7 +37,6 @@ article div.abs {
         opacity: 0;
         transform: translateX(-100%);
     }
-
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -46,16 +48,40 @@ article div.abs {
         opacity: 0;
         transform: translateX(100%);
     }
-
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
+img {
+    width: 40%;
+    border-radius: 20px;
+    transition-duration: .15s;
+}
+
 article img {
-    width: 50%;
+    width: 25%;
     border-radius: inherit;
+    box-shadow: 0 0 15px rgba(0 0 0 / 15%), 0 0 35px rgba(0 0 0 / 5%);
+}
+
+div.abs img:hover {
+    filter: none;
+}
+
+@media screen and (max-width: 750px) {
+    html img {
+        width: 100%;
+    }
+
+    html article img {
+        width: 40%;
+    }
+
+    html article div.abs {
+        column-gap: .75rem;
+    }
 }
 
 div.abs section {
