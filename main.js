@@ -75,7 +75,7 @@ function updateDiary() {
         ["27.10.2021", "Südamerika Seite erstellt & gestaltet. Außerdem Portfolio begonnen."],
         ["28.10.2021", "Kleine Behebungen am Portfolio bzgl. der Tooltips; Umbau der Navigation (Aufgaben jetzt auf der Onepage anstatt im Navigator); Schrift- & Bilder-Aufgabe angefangen."],
         ["29.10.2021", "Benutzerdefiniertes Kontextmenü; Design Umstrukturierung (andere Font); Navigator Logo hinzugefügt; Portfolio responsive gemacht; Protokoll sortierbar gemacht (Neu » Alt & Alt » Neu)"],
-        ["02.11.2021", "Animation auf allen Unterseiten eingefügt; Kleinere Umstrukturierungen am Dokumentenbaum; Schrift- & Bilder-Aufgabe fertig gemacht; Wochentage im Protokoll automatisiert."]
+        ["02.11.2021", "Animation auf allen Unterseiten eingefügt; Kleinere Umstrukturierungen am Dokumentenbaum; Schrift- & Bilder-Aufgabe fertig gemacht; Wochentage im Protokoll automatisiert; Darkmode (togglebar) hinzugefügt; Alle Unterseiten animiert."]
     ];
 
     if (new_old) {
