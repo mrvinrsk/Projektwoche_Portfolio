@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Fragen CSS Roßkothen</title>
 
+  <link rel="stylesheet" href="global.css">
   <link rel="stylesheet" href="css_fragen.css">
-
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
 
@@ -25,6 +25,9 @@
     main {
       width: 85%;
       margin: 3rem auto;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
     }
 
     h1 {
@@ -57,6 +60,8 @@
       border-radius: 5px;
     }
   </style>
+
+  <script src="animation.js" defer></script>
 </head>
 
 <body>
@@ -65,65 +70,90 @@
   <main>
     <h1>Fragen zu CSS</h1>
 
-    <h3>Welche Aufgabe übernimmt HTML und welche CSS bei der Webseitengestaltung?</h3>
-    <p>HTML sorgt für das Layout und den Inhalt einer Seite, CSS wird zum Gestalten der Elemente genutzt</p>
+    <div>
+      <h3>Welche Aufgabe übernimmt HTML und welche CSS bei der Webseitengestaltung?</h3>
+      <p>HTML sorgt für das Layout und den Inhalt einer Seite, CSS wird zum Gestalten der Elemente genutzt</p>
+    </div>
 
-    <h3>Zählen Sie 4 verschiedene CSS-Selektoren auf.</h3>
-    <ol>
-      <li>Universalselektor</li>
-      <li>Klassenselektor</li>
-      <li>ID-Selektor</li>
-      <li>Elementselektor</li>
-      <li>Pseudoklassen</li>
-    </ol>
+    <div>
+      <h3>Zählen Sie 4 verschiedene CSS-Selektoren auf.</h3>
+      <ol>
+        <li>Universalselektor</li>
+        <li>Klassenselektor</li>
+        <li>ID-Selektor</li>
+        <li>Elementselektor</li>
+        <li>Pseudoklassen</li>
+      </ol>
+    </div>
 
-    <h3>Was versteht man bei CSS unter &quot;Vererbung&quot;?</h3>
-    <p>Der Wert 'inherit' sorgt dafür, dass der Wert des Elternelements für das Kindelement übernommen wird.<br />
-      Hat beispielsweise ein &lt;div&gt; die Eigenschaft <code>color: #EEE;</code> und ein Text innerhalb dieses divs
-      <code>color: inherit;</code>, dann
-      wird dieser Text ebenfalls in #EEE angezeigt.
-    </p>
+    <div>
+      <h3>Was versteht man bei CSS unter &quot;Vererbung&quot;?</h3>
+      <p>Der Wert 'inherit' sorgt dafür, dass der Wert des Elternelements für das Kindelement übernommen wird.<br />
+        Hat beispielsweise ein &lt;div&gt; die Eigenschaft <code>color: #EEE;</code> und ein Text innerhalb dieses divs
+        <code>color: inherit;</code>, dann
+        wird dieser Text ebenfalls in #EEE angezeigt.
+      </p>
+    </div>
 
-    <h3>Welchen Vorteil haben externe CSS-Dateien?</h3>
-    <p>Eine externe CSS Datei sorgt für mehr Übersichtlichkeit und kann auf mehreren Seiten eingebunden werden, sodass
-      man
-      nicht immer wieder gleiche Regeln schreiben muss.</p>
+    <div>
+      <h3>Welchen Vorteil haben externe CSS-Dateien?</h3>
+      <p>Eine externe CSS Datei sorgt für mehr Übersichtlichkeit und kann auf mehreren Seiten eingebunden werden, sodass
+        man
+        nicht immer wieder gleiche Regeln schreiben muss.</p>
+    </div>
 
-    <h3>Es soll eine Klasse mit dem Namen &quot;rot&quot; definiert werden. <br />
-      Wie muss der Klassenbezeichner in die CSS Datei eingetragen werden?</h3>
-    <pre><code>
+    <div>
+      <h3>Es soll eine Klasse mit dem Namen &quot;rot&quot; definiert werden. <br />
+        Wie muss der Klassenbezeichner in die CSS Datei eingetragen werden?</h3>
+      <pre><code>
   .rot {
     color: red;
   }
   </code></pre>
+    </div>
 
-    <h3>Welches Attribut bestimmt die Schriftart?</h3>
-    <pre><code>font-family: 'Family...', fallback;</code></pre>
+    <div>
+      <h3>Welches Attribut bestimmt die Schriftart?</h3>
+      <pre><code>font-family: 'Family...', fallback;</code></pre>
+    </div>
 
-    <h3>Wie sieht der vom Attribut bestimmte Text aus?<br />
-      Bei: 1. font-style: italic?<br />
-    </h3>
-    <p>Kursiv (<i>Ich bin kursiv</i>)</p>
+    <div>
+      <h3>Wie sieht der vom Attribut bestimmte Text aus?<br />
+        Bei: 1. font-style: italic?<br />
+      </h3>
+      <p>Kursiv (<i>Ich bin kursiv</i>)</p>
+    </div>
 
-    <h3>2. background-color: #ffffff?</h3>
-    <p>Weiß als Hintergrundfarbe</p>
+    <div>
+      <h3>2. background-color: #ffffff?</h3>
+      <p>Weiß als Hintergrundfarbe</p>
+    </div>
 
-    <h3>3. text-decoration: underline?</h3>
-    <p>Unterstrichen</p>
+    <div>
+      <h3>3. text-decoration: underline?</h3>
+      <p>Unterstrichen</p>
+    </div>
 
-    <h3>4. font-weight: bold?</h3>
-    <p>Dick gedruckt</p>
+    <div>
+      <h3>4. font-weight: bold?</h3>
+      <p>Dick gedruckt</p>
+    </div>
 
-    <h3>5. color: #000000?</h3>
-    <p>Textfarbe schwarz</p>
+    <div>
+      <h3>5. color: #000000?</h3>
+      <p>Textfarbe schwarz</p>
+    </div>
 
-    <h3>
-      Sie haben in der externen CSS-Datei die h1-Überschrift mit color: #000000 definiert. <br />
-      Inline wird color: #FF0000 angegeben. Wie sieht Ihr Text aus?
-    </h3>
-    <p>Der Text kriegt die Farbe #FF0000, die inline definiert wurde, da, solange kein !important (bad practice)
-      verwendet
-      wird, inline immer priorisiert wird.</p>
+    <div>
+      <h3>
+        Sie haben in der externen CSS-Datei die h1-Überschrift mit color: #000000 definiert. <br />
+        Inline wird color: #FF0000 angegeben. Wie sieht Ihr Text aus?
+      </h3>
+      <p>Der Text kriegt die Farbe #FF0000, die inline definiert wurde, da, solange kein !important (bad practice)
+        verwendet
+        wird, inline immer priorisiert wird.</p>
+    </div>
+
   </main>
 </body>
 

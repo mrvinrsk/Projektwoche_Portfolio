@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animationen</title>
+
+    <link rel="stylesheet" href="../global.css">
+
+    <script type="module">
+        import anime from './animejs/lib/anime.es.js';
+
+        anime({
+            targets: '*',
+            opacity: [0, 1],
+            translateY: [anime.random(10, 100) + '%', 0],
+            duration: 1500,
+            delay: anime.stagger(100)
+        });
+    </script>
+</head>
+
+<body>
+
+    <main>
+        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, natus.</h2>
+
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, enim. Adipisci, optio! Enim voluptatibus veritatis cumque eaque tenetur at quod blanditiis ratione, esse excepturi vero quis est, autem cupiditate, alias quaerat. Ea possimus fuga doloribus! Ipsum aliquid illum dolorum sit temporibus beatae veritatis adipisci quae. Assumenda et veritatis sunt recusandae eum culpa ducimus dolores doloremque aliquid itaque, ullam eligendi, commodi saepe excepturi architecto voluptatum, praesentium exercitationem consequuntur iure enim dolorem? Fuga modi dolor reiciendis voluptatum sequi totam dolorem ratione delectus.
+        </p>
+    </main>
+
+</body>
+
+</html>

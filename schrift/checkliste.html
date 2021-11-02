@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="checkliste.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -20,8 +22,12 @@
         <h1>Checkliste: Schriften</h1>
 
         <div style="margin-top: .5rem;" id="check_wrapper">
-            
+
         </div>
+
+        <p style="text-align: right; color: #D3D3D3; margin-top: 5rem;">
+            Diese Checkliste wurde mit JavaScript generiert.
+        </p>
     </main>
 
     <script>
@@ -32,10 +38,10 @@
             ['Schrift importieren (Webfont, @font-face, usw.)', false, false],
             ['Gut lesbare Schriftgröße wählen', false, false],
             ['Schriftfarbe anpassen', false, true],
-    ];
+        ];
 
         todos.forEach((todo) => {
-            wrapper.innerHTML += '<div class="check">' + (todo[2] ? '(':'') + '<input type="checkbox"' + (todo[1] ? 'checked' : '') + '><label>' + todo[0] + '</label>' + (todo[2] ? ')':'') + '</div>';
+            wrapper.innerHTML += '<div class="check">' + (todo[2] ? '(' : '') + '<input type="checkbox"' + (todo[1] ? 'checked' : '') + '><label>' + todo[0] + '</label>' + (todo[2] ? ')' : '') + '</div>';
         });
     </script>
 </body>

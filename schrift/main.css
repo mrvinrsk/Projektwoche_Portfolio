@@ -88,11 +88,18 @@ div.fonts_wrapper h3 {
 
 div.fonts {
     display: flex;
-    flex-direction: row;
-    column-gap: 2rem;
+    flex-direction: column;
+    row-gap: 1rem;
     justify-content: space-between;
     align-items: stretch;
     font-size: 10px;
+}
+
+@media screen and (min-width: 1250px) {
+    html div.fonts {
+        flex-direction: row;
+        column-gap: 2rem;
+    }
 }
 
 .text {

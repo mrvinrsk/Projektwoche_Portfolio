@@ -24,11 +24,58 @@ setInterval(updateGreeting, 250);
 
 /* Diary [TODO: Eintragen] */
 let new_old = true;
+
+function getDoW(d) {
+    let single = d.split('.');
+    let datestr = single[1] + '.' + single[0] + '.' + single[2];
+
+    let date = new Date(Date.parse(datestr));
+    let day = date.getDay();
+    let dow = "";
+
+    switch (day) {
+        case 1:
+            dow = "Montag";
+            break;
+
+        case 2:
+            dow = "Dienstag";
+            break;
+
+        case 3:
+            dow = "Mittwoch";
+            break;
+
+        case 4:
+            dow = "Donnerstag";
+            break;
+
+        case 5:
+            dow = "Freitag";
+            break;
+
+        case 6:
+            dow = "Samstag";
+            break;
+
+        case 7:
+            dow = "Sonntag";
+            break;
+
+        default:
+            dow = "[Wrong Date]";
+            break;
+    }
+
+    return dow;
+}
+
 function updateDiary() {
     const diaries = [
         ["27.10.2021", "Südamerika Seite erstellt & gestaltet. Außerdem Portfolio begonnen."],
-        ["28.10.2021", "Kleine Behebungen am Portfolio bzgl. der Tooltips; Umbau der Navigation (Aufgaben jetzt auf der Onepage anstatt im Navigator); Schrift- & Bilder-Aufgabe gemacht."],
-        ["29.10.2021", "Benutzerdefiniertes Kontextmenü; Design Umstrukturierung (andere Font); Navigator Logo hinzugefügt; Portfolio responsive gemacht; Protokoll sortierbar gemacht (Neu » Alt & Alt » Neu)"]
+        ["28.10.2021", "Kleine Behebungen am Portfolio bzgl. der Tooltips; Umbau der Navigation (Aufgaben jetzt auf der Onepage anstatt im Navigator); Schrift- & Bilder-Aufgabe angefangen."],
+        ["29.10.2021", "Benutzerdefiniertes Kontextmenü; Design Umstrukturierung (andere Font); Navigator Logo hinzugefügt; Portfolio responsive gemacht; Protokoll sortierbar gemacht (Neu » Alt & Alt » Neu)"],
+        ["02.11.2021", "Animation auf allen Unterseiten eingefügt; Kleinere Umstrukturierungen am Dokumentenbaum; Schrift- & Bilder-Aufgabe fertig gemacht; Wochentage im Protokoll automatisiert."]
     ];
 
     if (new_old) {
@@ -38,34 +85,19 @@ function updateDiary() {
     const diary = document.getElementById('diary_wrapper');
     const sort_text = document.getElementById('diary_sorting');
 
+    diary.innerHTML = "";
+    diaries.forEach(el => {
+        diary.innerHTML += "<article class='diary_entry'><h3 class='diary_date'>Tätigkeiten am " + getDoW(el[0]) + ", " + el[0] + "</h3><p class='diary_text'>" + el[1] + "</p></article>";
+    });
+
     if (new_old) {
         sort_text.innerHTML = "Neu » Alt";
     } else {
         sort_text.innerHTML = "Alt » Neu";
     }
-
-    diary.innerHTML = "";
-    diaries.forEach(el => {
-        diary.innerHTML += "<article class='diary_entry'><h3 class='diary_date'>Tätigkeiten am " + el[0] + "</h3><p class='diary_text'>" + el[1] + "</p></article>";
-    });
 }
 
 updateDiary();
-
-
-let delay = 0;
-document.querySelector('main').querySelectorAll('*').forEach((el) => {
-    el.style.opacity = "0";
-
-    el.style.animation = "fadeIn .65s";
-    if (delay > 0) {
-        el.style.animationDelay = delay + "ms";
-    }
-    el.style.animationIterationCount = "1";
-    el.style.animationFillMode = "forwards";
-
-    delay += 25;
-});
 
 
 /* Popup */

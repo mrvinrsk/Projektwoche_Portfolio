@@ -123,6 +123,7 @@ p, span {
 }
 
 .diary_entry {
+    z-index: -10;
     background-color: #00ABFF;
     border-radius: 3px;
     padding: 1rem;

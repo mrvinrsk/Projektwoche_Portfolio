@@ -15,6 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
+    <script src="animation.js" defer></script>
 </head>
 
 <body>
@@ -138,6 +139,11 @@
                     <h3>Bilder</h3>
                     <p>Bilder und deren CSS Regeln.</p>
                 </a>
+
+                <a href="animation/index.html">
+                    <h3>Animationen</h3>
+                    <p>Dies bezieht sich nicht auf die Aufgabe des Portfolios.</p>
+                </a>
             </div>
         </div>
 
@@ -148,7 +154,7 @@
                 <div style="display: flex; justify-content: flex-end; column-gap: .75rem; align-items: center;">
                     <h4 id="diary_sorting" style="font-style: italic; display: inline;"></h4>
                     <button onclick='//new_old = !new_old; updateDiary();'
-                        style="cursor: pointer; display: inline; border: none; padding: .5rem 1rem; background-color: #D3D3D3; color: #EEE; border-radius: 2px;">Reihenfolge
+                        style="position: relative; z-index: 99; cursor: not-allowed; display: inline; border: none; padding: .5rem 1rem; background-color: #D3D3D3; color: #EEE; border-radius: 2px;">Reihenfolge
                         umkehren</button>
                 </div>
             </section>
@@ -157,7 +163,7 @@
         </div>
 
         <div style="margin-top: 5rem; color: #d3d3d3;">
-            <p style="color: inherit;">*) Für die Navigation im Gruppenprojekt werden wir die Navigationsleiste dieser Seite in angepasst verwenden.</p>
+            <p style="color: inherit;">*) Für die Navigation im Gruppenprojekt werden wir die Navigationsleiste von dieser Seite anpassen und verwenden.</p>
         </div>
     </main>
 
