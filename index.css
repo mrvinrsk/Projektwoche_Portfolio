@@ -119,6 +119,7 @@ p, span {
 #diary_title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #diary_title h2 {
@@ -126,11 +127,17 @@ p, span {
 }
 
 #diary_sorting::before {
-    content: 'Sortierung: ';
+    content: 'Sortierung: [';
 }
 
 #diary_sorting::after {
     content: ']';
+}
+
+@media screen and (max-width: 525px) {
+    html #diary_sorting {
+        font-size: .75rem;
+    }
 }
 
 #diary_wrapper {
@@ -354,6 +361,12 @@ footer img {
 
 html body #aufgaben_info {
     color: #343434;
+}
+
+@media screen and (max-width: 1250px) {
+    html #aufgaben_wrapper a p {
+        width: 80%;
+    }
 }
 
 /* Darkmode */
