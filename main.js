@@ -79,7 +79,8 @@ function updateDiary() {
         ["03.11.2021", "[Krankgemeldet]"],
         ["04.11.2021", "[Krankgemeldet]"],
         ["05.11.2021", "[Krankgemeldet]"],
-        ["08.11.2021", "Auf aktuellen Stand der Gruppenarbeit gebracht; Beim Designkonzept mitgeholfen; Impressum für die Gruppenarbeit erstellt."]
+        ["08.11.2021", "Auf aktuellen Stand der Gruppenarbeit gebracht; Beim Designkonzept mitgeholfen; Impressum für die Gruppenarbeit erstellt."],
+        ["09.11.2021", "Feedback für Projektwoche angefertigt; An Präsentation mitgeholfen."]
     ];
 
     if (new_old) {

@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <!-- Context Menüs -->
     <ul class="context" id="global_context">
         <p style="text-align: center; margin-bottom: .5rem; text-decoration: underline; color: #00ABFF;">Portfolio by
             Marvin</p>
@@ -31,8 +32,7 @@
     </ul>
 
     <ul class="context" id="text_context">
-        <li><a id="copy_text"><i
-                    class="bi bi-clipboard"></i>Markierung kopieren</a></li>
+        <li><a id="copy_text"><i class="bi bi-clipboard"></i>Markierung kopieren</a></li>
     </ul>
 
     <ul class="context" id="link_context">
@@ -46,11 +46,28 @@
         <li><a href="" id="open_img"><i class="bi bi-image"></i>Bild anzeigen</a></li>
     </ul>
 
+    <!-- Navigator -->
+    <div id="navigator_bg"></div>
+    <nav id="navigator">
+        <ul>
+            <li id="logo"><a href="#start"><img src="profilbild.png" /></a></li>
+            <li><a href="#start">Home</a></li>
+            <li><a href="#aufgaben">Aufgaben</a></li>
+            <li><a href="#verlauf">Protokoll</a></li>
+            <li onclick="togglePopup('ga_not_yet');"><a href="#">Gruppenarbeit</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li id="hamburger"><i class="bi bi-list"></i></li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <!-- Popups -->
     <div class="popup_wrapper" id="ga_not_yet">
         <div class="popup">
             <h3>Noch nicht verfügbar.</h3>
             <p>
-                Die Gruppenarbeit ist voraussichtlich erst ab dem 17.11.2021 hier verfügbar. Daher bitte ich noch um ein wenig
+                Die Gruppenarbeit ist voraussichtlich erst ab dem 17.11.2021 hier verfügbar. Daher bitte ich noch um ein
+                wenig
                 Geduld. 🤔
             </p>
 
@@ -61,23 +78,10 @@
         </div>
     </div>
 
-    <div id="navigator_bg"></div>
-    <nav id="navigator">
-        <ul>
-            <li id="logo"><a href="#start"><img src="profilbild.png" /></a></li>
-            <li><a href="#start">Home</a></li>
-            <li><a href="#aufgaben">Aufgaben</a></li>
-            <li><a href="#verlauf">Protokoll</a></li>
-            <li onclick="togglePopup('ga_not_yet');"><a href="#">Gruppenarbeit</a></li>
-            <li id="hamburger"><i class="bi bi-list"></i></li>
-        </ul>
-    </nav>
-
     <main id="start">
-        <div id="uff">
-            
-        </div>
+        <div id="uff"></div>
 
+        <!-- Header -->
         <div>
             <h1 id="title">Portfolio</h1>
         </div>
@@ -113,6 +117,7 @@
             </section>
         </div>
 
+        <!-- Aufgaben -->
         <div id="aufgaben" data-scroll-offset="110">
             <h2 style="margin:0;">Aufgaben</h2>
             <p style="margin:0;" id="aufgaben_info">
@@ -137,7 +142,7 @@
 
                 <a class="border"
                     onclick="document.getElementById('aufgaben_wrapper').classList.add('focussed'); setTimeout(function() { document.getElementById('aufgaben_wrapper').classList.remove('focussed'); }, 2500);">
-                    <h3>Navigation*</h3>
+                    <h3>Navigation</h3>
                     <p>Genau hier zu finden.</p>
                 </a>
 
@@ -153,6 +158,7 @@
             </div>
         </div>
 
+        <!-- Verlauf / Protokoll -->
         <div id="verlauf">
             <section id="diary_title">
                 <h2>Protokoll</h2>
@@ -168,8 +174,60 @@
             <section id="diary_wrapper"></section>
         </div>
 
-        <div style="margin-top: 5rem; color: #d3d3d3;">
-            <p style="color: inherit;">*) Für die Navigation im Gruppenprojekt werden wir die Navigationsleiste von dieser Seite anpassen und verwenden.</p>
+        <!-- Feedback zur Projektwoche -->
+        <div id="feedback">
+            <h2>Feedback zur Projektwoche</h2>
+
+            <div id="feedback_wrapper">
+                <div id="feedback_w1" class="feedback_box">
+                    <h3>1. Woche</h3>
+
+                    <div class="feedback_ul_wrapper">
+                        <div>
+                            <h4>Positiv</h4>
+                            <ul>
+                                <li>
+                                    Es wurde an Schüler gedacht, die noch bei Null anfangen bzw. keine Kenntnisse haben.
+                                </li>
+                                <li>(Für den Anfang) umfassende Tutorials.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4>Negativ</h4>
+                            <ul>
+                                <li>
+                                    Für mich persönlich relativ langweilig, da ich die Vorkenntnisse bereits hatte und
+                                    dementsprechend schnell fertig war.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="feedback_w2" class="feedback_box">
+                    <h3>2. Woche</h3>
+                    <p>
+                        Zur zweiten Woche kann ich nicht so viel sagen, da ich die ersten Tage gefehlt habe und
+                        dementsprechend leider nicht viel mitmachen konnte.
+                    </p>
+
+                    <div class="feedback_ul_wrapper">
+                        <div>
+                            <h4>Positiv</h4>
+                            <ul>
+                                <li>/</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4>Negativ</h4>
+                            <ul>
+                                <li>Zeitraum etwas knapp.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
